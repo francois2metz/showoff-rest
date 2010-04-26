@@ -28,7 +28,7 @@
 
 # 3. Le versionnage aléatoire #
 
-Pas bien
+## Pas bien ##
 
 * /dp/ws
 * /dpv1/ws
@@ -37,7 +37,7 @@ Pas bien
 
 !SLIDE bullets incremental
 
-Bien:
+## Bien ##
 
 * /dp/ws/1
 * /dp/ws/2
@@ -67,7 +67,7 @@ Bien:
 
 !SLIDE
 
-# 7. Le PUT remplace partiellement une ressource #
+# 7. Le PUT qui remplace partiellement une ressource #
 
 ## Le PUT remplace totalement une ressource (en théorie). ##
 
