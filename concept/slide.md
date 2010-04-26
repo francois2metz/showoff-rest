@@ -2,16 +2,22 @@
 
 # 10 choses a ne PAS faire lorsque vous concevez une API REST. #
 
-!SLIDE 
+!SLIDE bullets incremental
 
-# 1. Ne pas penser la sécurité à la fin #
+# 1. Penser la sécurité à la fin #
 
 * Cookies
-* gestion des permissions ..
+* Gestion des permissions ..
 
-!SLIDE
+!SLIDE bullets incremental
 
-# 2. Utilisez les codes HTTP Standards #
+# 2. Utiliser les codes HTTP Standards sans rapport avec ce qui c'est passé #
+
+* "404 Pas Permission"
+* 500 lors d'une erreur de requêtes
+* 200 lorsque tout a pété
+
+!SLIDE bullets incremental
 
 * La classe des 2xx sont des codes de succès
 * La classe des 3xx sont des codes redirection
@@ -20,40 +26,40 @@
 
 !SLIDE bullets incremental
 
-Banisser:
-* "404 Pas Permission"
-* 500 lors d'une erreur de requêtes
-* 200 lorsque tout a pété
+# 3. Le versionnage aléatoire #
 
-!SLIDE
+Pas bien
 
-# 3. Versionnez correctement votre API #
-
-Base d'uri toujours pareil.
-
-Pas Bien:
 * /dp/ws
 * /dpv1/ws
 * /dp/ws/v2
 * /dp/wsp/v2
 
+!SLIDE bullets incremental
+
 Bien:
+
 * /dp/ws/1
 * /dp/ws/2
 
 !SLIDE
 
-# 4. Tenez une documentation à jour #
+# 4. La documentation pas à jour #
 
-L'ingénierie inverse c'est marrant deux minutes
+## L'ingénierie inverse c'est marrant deux minutes ##
 
-!SLIDE
+!SLIDE bullets incremental
 
-# 5. Utilisez des URI différentes pour chaque action #
+# 5. Utiliser les mêmes URI pour des actions différentes #
 
-!SLIDE
+## PUT /user/$userId ##
 
-# 6. Testez #
+* Modification de l'utilisateur
+* Réinitialisation des identifiants
+
+!SLIDE bullets incremental
+
+# 6. Chuck Norris ne teste pas, moi non plus #
 
 * Client HTTP Standard
 * Pour l'envoi de mail => fakemailserver
@@ -61,18 +67,20 @@ L'ingénierie inverse c'est marrant deux minutes
 
 !SLIDE
 
-# 7. Exposez votre numéro de version #
+# 7. Le PUT remplace partiellement une ressource #
 
-!SLIDE
+## Le PUT remplace totalement une ressource (en théorie). ##
 
-# 8. Gardez une cohérence dans les paramètres #
+!SLIDE bullets incremental
+
+# 8. Des paramètres non uniformes entre services #
 
 * start-index qui des fois est startIndex
 * max-results qui des fois est maxResults
 
-!SLIDE
+!SLIDE bullets incremental
 
-# 9. Le franglais c'est mal #
+# 9. Le franglais c'est amusant #
 
 * /share/
 * /documentsecurisee
@@ -80,4 +88,7 @@ L'ingénierie inverse c'est marrant deux minutes
 !SLIDE
 
 # 10. le xml de sortie DOIT etre valide  #
+
+## C'est déjà une API pas vraiment REST, il ne faudrait pas qu'elle soit XML aléatoirement ##
+
 
